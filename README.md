@@ -33,28 +33,37 @@ Bespoke Nails has an established customer base in the physical location of the s
 #### Tech Stack 
 The application is created using the MERN stack, which consistes of the following technology running in a Node environment: 
 
-- A Mongo Database to manage data about appointments and customers (with appropriate authentication via passport in the server, and client). 
+- A Mongo Database to manage data about appointments and customers (with appropriate authentication via passport in the server, and client). Documents for orders. 
 - Mongoose 
 - An Express Server which covers the back-end of the application 
 - React to create the client application
 - JavaScript libraries 
-including calender _____, passport for authentication 
+including calender _____, passport for authentication
+- email service  
 - Amazon S3 storage of uploaded images
 - Deployment of the server with Heroku
 - Deployment of the client with Netlify
 - Axios as a HTTP client to manage request and response between the server and client
+- instagram api
 
 
 
 ## Architecture
 
 ## User Stories
+https://app.cardboardit.com/maps/134182
 
 ## Wireframes
 
 ## Dataflow diagram
 
 ## Workflow
+
+**Methodology**
+The team will be following an agile approach to the project including using a Trello board to show task progress and completion as well as assigning tasks. 
+This will follow a 'kanban' approach of continuous integration over the 4 week timeline with daily stand-ups to reflect on progress and workthrough problems. Following the Kanban approach there will be no required roles but rather shared responsibility and transparency where change can occur at any time rather than waiting for the end of a sprint (as in Scrum approaches). 
+
+**Git**
 A GitHub organization 'Zara-Tyrer' was created for the members of the team to support a shared workspace and repositories. 
 
 3 repositories were created: 
@@ -62,6 +71,11 @@ A GitHub organization 'Zara-Tyrer' was created for the members of the team to su
 - React client 
 - Express Server 
 
-Individuals then forked the repositories to individual accounts and cloned local 
+Individuals then:
+- Forked the repositories to individual accounts
+- Cloned to local repository 
+- Feature Branch is created
+- Regular commits pushed to feature branch in forked repository
+- Pull request is made to merge feature branch into central (original) respository
 
 ## Project Management - Trello Screenshots
