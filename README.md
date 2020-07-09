@@ -17,17 +17,26 @@ Bespoke Nails has an established customer base in the physical location of the s
 
 #### Features
 
-**Admin**
+##### MVP
+The mimimum viable product has a scaled down number of features. The MVP functionality consists of authentication and authorization of an Admin user, CRUD operations for the list of items that can be ordered, as well as a form that the customer can use to create a custom order. The Admin is able to view the orders in the Admin dashboard and mark as completed which will in turn will affect the sorting of the orders. The application will also encompasss information about the brand including a menu-style display of appointment cost and options, such as a manicure, $35, 30 mins. For the MVP, the rendering of information including the 'About' and 'Portfolio' aspects will be static with the intention to develop with CRUD operations in a further release that can be utilized by the Admin to update the application themselves. 
 
-- Calendar 
-- Orders 
-- Portfolio
+In the MVP, the customer does not require authentication as customers have very limited authorization to perform actions. The customer is able to read and create an order, either by selecting a previously designed item or creating a custom order. The customer can view the 'About' and 'Portfolio' pages and complete a 'Contact' form for queries. 
 
-**Customer**
+##### 2nd Release
 
-- Make an appointment 
-- Orders
+As visual imagery is a major component in selling the product, a prioritised feature during the 2nd Release is the use of the instagram developer API, so the admin can utilize the instagram feed in the portfolio section and streamline sharing of images of their work.
 
+The second release extends customization of the order form, by giving customers the option to upload an image. Image storage is achieved through the use of Amazon S3 cloud storage. 
+
+The second release incorporates calendar and appointment functionality. The visual calendar is accessed via the Admin dashboard once the Admin has been authenticated. The Admin also has the ability to perform CRUD operations on the appointments in the calendar manually, while the appointments made via the application by a customer are automatically added to the calendar. From a customer point of view, a customer can book an appointment by checking a certain day, with available time slots able to book via completion of a form with customer details and appointment options.  
+
+##### 3rd Release
+
+The third release of the application incorporates functionality for the customer to be authenticated and see their history of past appointments and orders. 
+
+The efficiency of Admin-Customer communication is streamlined with the use of emails sent from the application to confirm the order and estimated time of completion for pick-up. 
+
+The third release makes the Update and Delete CRUD actions available for the 'About' page to give the Admin more autonomy in managing the application as it renders (rather than uploading a PDF). 
 
 
 #### Tech Stack 
@@ -46,6 +55,10 @@ including calender _____, passport for authentication
 - Axios as a HTTP client to manage request and response between the server and client
 - instagram api
 
+Project Management Tools
+- Figma
+- Trello
+- Cardboard
 
 
 ## Architecture
