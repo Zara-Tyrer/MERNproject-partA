@@ -82,6 +82,14 @@ https://app.cardboardit.com/maps/134182
 
 ## Dataflow diagram
 
+
+Data Flow Diagram for MVP
+![Data Flow diagram](/images/Data-Flow-Diagram.png)
+Diagram Key (Yourdon & Coad conventions)
+![Data Flow Diagram Key following Yourdon and Coad comventions](/images/dataflow-key.png)
+
+2nd Release would include Calendar and Appointment features with CRUD operations. 
+
 ## Workflow
 
 ##### Methodology
