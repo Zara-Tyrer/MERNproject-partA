@@ -82,13 +82,14 @@ https://app.cardboardit.com/maps/134182
 
 ## Dataflow diagram
 
-
 Data Flow Diagram for MVP
 ![Data Flow diagram](/images/Data-Flow-Diagram.png)
 Diagram Key (Yourdon & Coad conventions)
 ![Data Flow Diagram Key following Yourdon and Coad comventions](/images/dataflow-key.png)
 
-2nd Release would include Calendar and Appointment features with CRUD operations. 
+2nd Release would include Calendar and Appointment features with CRUD operations.
+
+https://www.figma.com/file/ry0gd3MjyaOz7ZGgK0p8iz/Data-Flow---Bespoke-Nails-J%26C?node-id=0%3A1
 
 ## Workflow
 
@@ -113,3 +114,10 @@ Individuals then:
 - Pull request is made to merge feature branch into central (original) respository
 
 ## Project Management - Trello Screenshots
+
+Trello was used to map out Part A. Requirements were added as well as important links and ideas. Requirements were allocated and tracked via coloured tag. 
+
+![Trello Screenshot 1](/images/Trello1.png)
+![Trello Screenshot 2](/images/Trello2.png)
+![Trello Screenshot 3](/images/Trello3.png)
+![Trello Screenshot 4](/images/)
