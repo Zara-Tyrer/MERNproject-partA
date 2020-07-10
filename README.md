@@ -64,6 +64,18 @@ Project Management Tools
 ## Architecture
 
 ## User Stories
+Before Refinement:
+![pre-refinement user stories](/images/original-US.png)
+
+After refinement (MVP and prioritised release):
+![refined user stories](/images/refined-US.png)
+
+Admin User Stories
+![Admin User stories](/images/refined-admin.png)
+
+Customer User Stories
+![Customer User stories](/images/refined-customer.png)
+
 https://app.cardboardit.com/maps/134182
 
 ## Wireframes
@@ -72,7 +84,8 @@ https://app.cardboardit.com/maps/134182
 
 ## Workflow
 
-**Methodology**
+##### Methodology
+
 The team will be following an agile approach to the project including using a Trello board to show task progress and completion as well as assigning tasks. 
 This will follow a 'kanban' approach of continuous integration over the 4 week timeline with daily stand-ups to reflect on progress and workthrough problems. Following the Kanban approach there will be no required roles but rather shared responsibility and transparency where change can occur at any time rather than waiting for the end of a sprint (as in Scrum approaches). 
 
