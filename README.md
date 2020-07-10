@@ -1,6 +1,7 @@
-# MERNproject-partA
+# Bespoke Nails (MERN application): Part A
 
 Developers: **Jade Tyrer & Cassandra Zara**
+
 Part A of final Coder Academy project - documentation for MERN app
 
 ## Outline 
