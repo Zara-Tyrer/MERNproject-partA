@@ -97,7 +97,8 @@ https://www.figma.com/file/ry0gd3MjyaOz7ZGgK0p8iz/Data-Flow---Bespoke-Nails-J%26
 ##### Methodology
 
 The team will be following an agile approach to the project including using a Trello board to show task progress and completion as well as assigning tasks. 
-This will follow a 'kanban' approach of continuous integration over the 4 week timeline with daily stand-ups to reflect on progress and workthrough problems. Following the Kanban approach there will be no required roles but rather shared responsibility and transparency where change can occur at any time rather than waiting for the end of a sprint (as in Scrum approaches). 
+
+This will follow a 'Kanban' approach of continuous integration over the 4 week timeline with daily stand-ups to reflect on progress and workthrough problems. Following the Kanban approach there will be no required roles but rather shared responsibility and transparency where change can occur at any time rather than waiting for the end of a sprint (as in Scrum approaches). A Kanban board (Trello) was set up with the cards being moved between the 'To-do', 'In Progress' and 'Done' with user stories labelled by priority from 'MVP' and 'Beyond MVP', as well as 'Admin' and 'Customer' stories. Stories are also labelled to show complexity such as 'Authentication Not Required' to aid with time estimation.  
 
 **Git**
 A GitHub organization 'Zara-Tyrer' was created for the members of the team to support a shared workspace and repositories. 
@@ -121,4 +122,4 @@ Trello was used to map out Part A. Requirements were added as well as important 
 ![Trello Screenshot 1](/images/Trello1.png)
 ![Trello Screenshot 2](/images/Trello2.png)
 ![Trello Screenshot 3](/images/Trello3.png)
-![Trello Screenshot 4](/images/)
+![Trello Screenshot 4](/images/Trello4.png)
