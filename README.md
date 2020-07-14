@@ -85,6 +85,8 @@ https://app.cardboardit.com/maps/134182
 
 ## Wireframes
 
+[Link to Figma Prototype](https://www.figma.com/file/goZeDczPJzsj4Fe6HBzmLs/Wireframing-(Copy)?node-id=0%3A1)
+
 The design of the application has a consistent colour scheme to communicate the brand on every page. Pink, black and white are the predominant colours used throughout the application as they reference the Bespoke nails logo, and therefore the majority of the application (images will be refined based on accessibility testing at a later date) will adhere to contrast requirements that ensure accessibility. The colour scheme is designed to appeal to the target audience with the design encompassing a simple and modern aesthetic to appeal to a younger demographic and to further aid with the navigation between pages of the application. As the images used act as a portfolio that is evidence of the highly detailed artwork in each product, it was important that the surrounding content design was clean and simple to invoke the connotation of an art gallery setting and furthur elevate the product. There is minimal information displayed on each page to ensure the user is drawn to the key purpose and functionality of each page such as completing a form. There are descriptive links with clear navigation to pages with more specific information, for example, the about/prices page which is a key piece of information a consumer may want to know. This aspect of the design is aligned with the user stories and flow within the application. 
 
 ![homepage](/docs/homepage.png) 
