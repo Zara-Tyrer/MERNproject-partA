@@ -2,7 +2,7 @@
 
 Developers: **Jade Tyrer & Cassandra Zara**
 
-Part A of final Coder Academy project - documentation for MERN app
+Part A of Term 3 Coder Academy project - documentation for MERN application
 
 ## Outline 
 
@@ -41,25 +41,29 @@ The third release makes the Update and Delete CRUD actions available for the 'Ab
 
 
 #### Tech Stack 
-The application is created using the MERN stack, which consistes of the following technology running in a Node environment: 
+The application is created using the MERN stack, which consistes of the following technology running in a Node.js environment: 
 
-- A Mongo Database to manage data about appointments and customers (with appropriate authentication via passport in the server, and client). Documents for orders. 
-- Mongoose 
+Storage
+- A Mongo Database to manage data about appointments, customers (with appropriate authentication via passport in the server, and client) and orders. 
+- AWS Amazon S3 for storage of uploaded images (for custom design) in further release
+- Mongoose to interact with MongoDB, as an object modelling tool (Schema design). 
+
+Back-end
 - An Express Server which covers the back-end of the application 
-- React to create the client application
-- JavaScript libraries 
-including calender _____, passport for authentication
-- email service  
-- Amazon S3 storage of uploaded images
+- JavaScript libraries: Passport for authentication
+
+Front-end
+- React to create the client application which runs in various browsers
+
+Deployment
 - Deployment of the server with Heroku
 - Deployment of the client with Netlify
 - Axios as a HTTP client to manage request and response between the server and client
-- instagram api
 
 Project Management Tools
-- Figma
-- Trello
-- Cardboard
+- Figma for diagrams and wireframe prototype
+- Trello for Kanban board
+- Cardboard for User Stories
 
 
 ## Architecture
@@ -108,7 +112,9 @@ There will be a completed message communicated to the user after they have submi
 ![order-complete](/docs/order-complete.png)
 
 When a user has entered their email to join the mailing list the option be will be greyed out as a visual indication the submission was successful. 
+
 ![submitted](/docs/submitted.png)
+
 ![about-page](/docs/about-page.png)
 ![query-form](/docs/query-form.png)
 ![query-complete](/docs/query-complete.png)
