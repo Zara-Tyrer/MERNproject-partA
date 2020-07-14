@@ -81,6 +81,59 @@ https://app.cardboardit.com/maps/134182
 
 ## Wireframes
 
+The design of the application has a consistent colour scheme to communicate the brand on every page. Pink is the predominant colour used throughout the application in keeping with the Bespoke nails logo. This is in keeping with the target audience which would be primarily women. The design is simple and modern to appeal to a younger demographic and aid with the navigation of the page. There is minimal information displayed on each page but clear navigation to pages with more specific information, for example, the about/prices page which is a key piece of information a consumer may want to know. 
+ 
+The navigation bar is displayed at the top and bottom of every page to ensure the user can navigate quickly throughout the entire application. The landing page has a nail polish in the background to communicate the purpose and content of the application. There is a prominent order button designed to stand-out and direct the user to the shop, with the ultimate goal of the user ordering nails. This is strategically placed as the key feature on the homepage and clearly labelled so the user is aware of the action that clicking the button will invoke. 
+
+The secondary purpose of the site is for the admin to track the products, orders and queries. This is accessed via the admin login at the bottom of the homepage, this link is displayed in the footer as it is not accessible to Bespoke Nail clients but is easily found for admin users that will be aware of where it is located. 
+
+The admin user will be redirected to a dashboard that will display the queries and orders and will have side navigation that will display this information in more detail when clicked. The side navigation will also display a link to the shop to create, update and delete products displayed in the shop. The admin user will display the picture and username of the admin that is logged in with the logout button displayed below for ease of user control. 
+
+There will be a completed message communicated to the user after they have submitted either order or query to ensure the user is aware that their requested action has been committed successfully. This message will include order details and/or details of what steps to expect next to ensure a quality user experience. 
+
+![homepage](homepage.png)
+
+When a user has entered their email to join the mailing list the option be will be greyed out as a visual indication the submission was successful. 
+![submitted](submitted.png)
+
+![admin-login](admin-login.png)
+
+![dashboard-home](dashboard-home.png)
+![dashboard-orders](dashboard-orders.png)
+![dashboard-order-detail](dashboard-order-detail.png)
+
+![order-form](order-form.png)
+![order-complete](order-complete.png)
+
+![about-page](about-page.png)
+
+![query-form](query-form.png)
+![query-complete](query-complete.png)
+
+![user-shop](user-shop.png)
+![lookbook](lookbook.png)
+
+![admin-shop](admin-shop.png)
+![create-product](create-product.png)
+
+![giftcard-form](giftcard-form.png)
+
+The prototype was designed using Figma demonstrating how the user can navigate through the site. The prototype can be accessed [here](https://www.figma.com/file/goZeDczPJzsj4Fe6HBzmLs/Wireframing-(Copy)?node-id=0%3A1). The link will open and the prototype view can be opened by clicking the play button ![play-button](play-button.png) in the top right corner. 
+
+![prototype](prototype.png)  
+
+##### Mobile Views
+
+![mobile-homepage](mobile-homepage.png)
+![burger-menu](burger-menu.png)
+
+![mobile-dashboard](mobile-dashboard.png)
+![mobile-order](mobile-order.png)
+![mobile-about](mobile-about.png)
+![mobile-query](mobile-query.png)
+
+
+
 ## Dataflow diagram
 
 Data Flow Diagram for MVP
