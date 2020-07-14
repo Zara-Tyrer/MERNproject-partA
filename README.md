@@ -66,16 +66,16 @@ Project Management Tools
 
 ## User Stories
 Before Refinement:
-![pre-refinement user stories](/images/original-US.png)
+![pre-refinement user stories](/docs/original-US.png)
 
 After refinement (MVP and prioritised release):
-![refined user stories](/images/refined-US.png)
+![refined user stories](/docs/refined-US.png)
 
 Admin User Stories
-![Admin User stories](/images/refined-admin.png)
+![Admin User stories](/docs/refined-admin.png)
 
 Customer User Stories
-![Customer User stories](/images/refined-customer.png)
+![Customer User stories](/docs/refined-customer.png)
 
 https://app.cardboardit.com/maps/134182
 
@@ -91,55 +91,55 @@ The admin user will be redirected to a dashboard that will display the queries a
 
 There will be a completed message communicated to the user after they have submitted either order or query to ensure the user is aware that their requested action has been committed successfully. This message will include order details and/or details of what steps to expect next to ensure a quality user experience. 
 
-![homepage](homepage.png)
+![homepage](/docs/homepage.png)
 
 When a user has entered their email to join the mailing list the option be will be greyed out as a visual indication the submission was successful. 
-![submitted](submitted.png)
+![submitted](/docs/submitted.png)
 
-![admin-login](admin-login.png)
+![admin-login](/docs/admin-login.png)
 
-![dashboard-home](dashboard-home.png)
-![dashboard-orders](dashboard-orders.png)
-![dashboard-order-detail](dashboard-order-detail.png)
+![dashboard-home](/docs/dashboard-home.png)
+![dashboard-orders](/docs/dashboard-orders.png)
+![dashboard-order-detail](/docs/dashboard-order-detail.png)
 
-![order-form](order-form.png)
-![order-complete](order-complete.png)
+![order-form](/docs/order-form.png)
+![order-complete](/docs/order-complete.png)
 
-![about-page](about-page.png)
+![about-page](/docs/about-page.png)
 
-![query-form](query-form.png)
-![query-complete](query-complete.png)
+![query-form](/docs/query-form.png)
+![query-complete](/docs/query-complete.png)
 
-![user-shop](user-shop.png)
-![lookbook](lookbook.png)
+![user-shop](/docs/user-shop.png)
+![lookbook](/docs/lookbook.png)
 
-![admin-shop](admin-shop.png)
-![create-product](create-product.png)
+![admin-shop](/docs/admin-shop.png)
+![create-product](/docs/create-product.png)
 
-![giftcard-form](giftcard-form.png)
+![giftcard-form](/docs/giftcard-form.png)
 
 The prototype was designed using Figma demonstrating how the user can navigate through the site. The prototype can be accessed [here](https://www.figma.com/file/goZeDczPJzsj4Fe6HBzmLs/Wireframing-(Copy)?node-id=0%3A1). The link will open and the prototype view can be opened by clicking the play button ![play-button](play-button.png) in the top right corner. 
 
-![prototype](prototype.png)  
+![prototype](/docs/prototype.png)  
 
 ##### Mobile Views
 
-![mobile-homepage](mobile-homepage.png)
-![burger-menu](burger-menu.png)
+![mobile-homepage](/docs/mobile-homepage.png)
+![burger-menu](/docs/burger-menu.png)
 
-![mobile-dashboard](mobile-dashboard.png)
-![mobile-order](mobile-order.png)
-![mobile-about](mobile-about.png)
-![mobile-query](mobile-query.png)
+![mobile-dashboard](/docs/mobile-dashboard.png)
+![mobile-order](/docs/mobile-order.png)
+![mobile-about](/docs/mobile-about.png)
+![mobile-query](/docs/mobile-query.png)
 
 
 
 ## Dataflow diagram
 
 Data Flow Diagram for MVP
-![Data Flow diagram](/images/Data-Flow-Diagram.png)
+![Data Flow diagram](/docs/Data-Flow-Diagram.png)
 Diagram Key (Yourdon & Coad conventions)
-![Data Flow Diagram Key following Yourdon and Coad comventions](/images/dataflow-key.png)
+![Data Flow Diagram Key following Yourdon and Coad comventions](/docs/dataflow-key.png)
 
 2nd Release would include Calendar and Appointment features with CRUD operations.
 
@@ -172,7 +172,7 @@ Individuals then:
 
 Trello was used to map out Part A. Requirements were added as well as important links and ideas. Requirements were allocated and tracked via coloured tag. 
 
-![Trello Screenshot 1](/images/Trello1.png)
-![Trello Screenshot 2](/images/Trello2.png)
-![Trello Screenshot 3](/images/Trello3.png)
-![Trello Screenshot 4](/images/Trello4.png)
+![Trello Screenshot 1](/docs/Trello1.png)
+![Trello Screenshot 2](/docs/Trello2.png)
+![Trello Screenshot 3](/docs/Trello3.png)
+![Trello Screenshot 4](/docs/Trello4.png)
