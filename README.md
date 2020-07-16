@@ -45,7 +45,7 @@ The application is created using the MERN stack, which consists of the following
 
 Storage
 - A Mongo Database to manage data about appointments, customers (with appropriate authentication via passport in the server, and client) and orders. 
-- AWS Amazon S3 for storage of uploaded images (for custom design) in further release
+- AWS Amazon S3 for storage of uploaded images (for custom design) in further release, for increased scalability. 
 - Mongoose to interact with MongoDB, as an object modelling tool (Schema design). 
 
 Back-end
