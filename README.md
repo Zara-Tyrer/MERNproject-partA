@@ -7,25 +7,25 @@ Part A of Term 3 Coder Academy project - documentation for MERN application
 ## Outline 
 
 #### Purpose
-"Bespoke Nails" is known for creating unique and highly detailed hand-painted designs for nails, is based in the UK, and has an established instagram platform with a strong aesthetic and logo and a loyal customer base. Bespoke Nails (BN) functioned as an in-person apppointment beauty service prior to 2020, and with social distancing rules, has branched out to include pre-made stick-on nails that can be applied by the customer at home.   
+"Bespoke Nails" is known for creating unique and highly detailed hand-painted designs for nails, is based in the UK, and has an established Instagram platform with a strong aesthetic and logo and a loyal customer base. Bespoke Nails (BN) functioned as an in-person appointment beauty service before 2020, and with social distancing rules, has branched out to include pre-made stick-on nails that can be applied by the customer at home.   
 
-The purpose of the application is to extend the online platform and functionality for "Bespoke Nails" to digitally manage customer appointments and orders more easily during the work from home era. The application should allow customer appointments and orders to be made online with a certain level of automation to circumvent all appointments being made via phone call or instagram direct messages which require a high level of time and effort to keep ordered. The application should allow the owner or admin to view and manage the calendar, see all orders in a central location, and send order confirmation and estimated pick-up time. The application should allow the customer to see availability and request an appointment, order pre-made stick-on nails or create a custom order for stick-on nails. 
+The purpose of the application is to extend the online platform and functionality for "Bespoke Nails" to digitally manage customer appointments and orders more easily during the work from home era. The application should allow customer appointments and orders to be made online with a certain level of automation to circumvent all appointments being made via phone call or Instagram direct messages which require a high level of time and effort to keep in order. The application should allow the owner or admin to view and manage the calendar, see all orders in a central location, and send an order confirmation and estimated pick-up time. The application should allow the customer to see availability and request an appointment, order pre-made stick-on nails or create a custom order for stick-on nails. 
 
-Further releases of the application may see inclusion of customer authentication to see a history of appointments and designs for a more personalised experience and an online store to handle payments. 
+Further releases of the application may see the inclusion of customer authentication to see a history of appointments and designs for a more personalised experience and an online store to handle payments. 
 
 #### Target Audience
-Bespoke Nails has an established customer base in the physical location of the service, as well as a strong following on instagram engaging a younger generation through social media. The target audience consists of a younger cohort aged from roughly 14 - 40, with a strong interest in fashion trends, artistic expression and bright, bold design. Bespoke Nails attracts a large percentage of female-identifying persons though gender is not an exclusive characteristic of BN's customers. 
+Bespoke Nails has an established customer base in the physical location of the service, as well as a strong following on Instagram engaging a younger generation through social media. The target audience consists of a younger cohort aged from roughly 14 - 40, with a strong interest in fashion trends, artistic expression and bright, bold design. Bespoke Nails attracts a large percentage of female-identifying persons though gender is not an exclusive characteristic of BN's customers. 
 
 #### Features
 
 ##### MVP
-The mimimum viable product has a scaled down number of features. The MVP functionality consists of authentication and authorization of an Admin user, CRUD operations for the list of items that can be ordered, as well as a form that the customer can use to create a custom order. The Admin is able to view the orders in the Admin dashboard and mark as completed which will in turn will affect the sorting of the orders. The application will also encompasss information about the brand including a menu-style display of appointment cost and options, such as a manicure, $35, 30 mins. For the MVP, the rendering of information including the 'About' and 'Portfolio' aspects will be static with the intention to develop with CRUD operations in a further release that can be utilized by the Admin to update the application themselves. 
+The minimum viable product has a scaled-down number of features. The MVP functionality consists of authentication and authorization of an Admin user, CRUD operations for the list of items that can be ordered, as well as a form that the customer can use to create a custom order. The Admin can view the orders in the Admin dashboard and mark as completed which will, in turn, will affect the sorting of the orders. The application will also encompass information about the brand including a menu-style display of appointment cost and options, such as a manicure, $35, 30 mins. For the MVP, the rendering of information including the 'About' and 'Portfolio' aspects will be static with the intention to develop with CRUD operations in a further release that can be utilized by the Admin to update the application themselves. 
 
-In the MVP, the customer does not require authentication as customers have very limited authorization to perform actions. The customer is able to read and create an order, either by selecting a previously designed item or creating a custom order. The customer can view the 'About' and 'Portfolio' pages and complete a 'Contact' form for queries. 
+In the MVP, the customer does not require authentication as customers have very limited authorization to perform actions. The customer can read and create an order, either by selecting a previously designed item or creating a custom order. The customer can view the 'About' and 'Portfolio' pages and complete a 'Contact' form for queries. 
 
 ##### 2nd Release
 
-As visual imagery is a major component in selling the product, a prioritised feature during the 2nd Release is the use of the instagram developer API, so the admin can utilize the instagram feed in the portfolio section and streamline sharing of images of their work.
+As visual imagery is a major component in selling the product, a prioritised feature during the 2nd Release is the use of the Instagram developer API, so the admin can utilize the Instagram feed in the portfolio section and streamline sharing of images of their work.
 
 The second release extends customization of the order form, by giving customers the option to upload an image. Image storage is achieved through the use of Amazon S3 cloud storage. 
 
@@ -41,7 +41,7 @@ The third release makes the Update and Delete CRUD actions available for the 'Ab
 
 
 #### Tech Stack 
-The application is created using the MERN stack, which consistes of the following technology running in a Node.js environment: 
+The application is created using the MERN stack, which consists of the following technology running in a Node.js environment: 
 
 Storage
 - A Mongo Database to manage data about appointments, customers (with appropriate authentication via passport in the server, and client) and orders. 
@@ -58,15 +58,18 @@ Front-end
 Deployment
 - Deployment of the server with Heroku
 - Deployment of the client with Netlify
-- Axios as a HTTP client to manage request and response between the server and client
+- Axios as an HTTP client to manage request and response between the server and client
 
 Project Management Tools
 - Figma for diagrams and wireframe prototype
 - Trello for Kanban board
 - Cardboard for User Stories
 
-
 ## Architecture
+![architecture diagram](/docs/architecture-diagram.png)
+
+The diagram above indicates how different components of the MERN application interact and can be grouped into the Client, Server and Database. The two endpoints communicate through requests and responses with data in the form of JSON, from Axios (an example of a method to handle requests client-side) on the client-side to the API in the back-end. MongoDB will store the text information regarding products, orders and queries and an AWS S3 bucket will store the uploaded images to ensure that it is scalable.
+
 
 ## User Stories
 Before Refinement:
@@ -87,11 +90,11 @@ https://app.cardboardit.com/maps/134182
 
 [Link to Figma Prototype](https://www.figma.com/file/goZeDczPJzsj4Fe6HBzmLs/Wireframing-(Copy)?node-id=0%3A1)
 
-The design of the application has a consistent colour scheme to communicate the brand on every page. Pink, black and white are the predominant colours used throughout the application as they reference the Bespoke nails logo, and therefore the majority of the application (images will be refined based on accessibility testing at a later date) will adhere to contrast requirements that ensure accessibility. The colour scheme is designed to appeal to the target audience with the design encompassing a simple and modern aesthetic to appeal to a younger demographic and to further aid with the navigation between pages of the application. As the images used act as a portfolio that is evidence of the highly detailed artwork in each product, it was important that the surrounding content design was clean and simple to invoke the connotation of an art gallery setting and furthur elevate the product. There is minimal information displayed on each page to ensure the user is drawn to the key purpose and functionality of each page such as completing a form. There are descriptive links with clear navigation to pages with more specific information, for example, the about/prices page which is a key piece of information a consumer may want to know. This aspect of the design is aligned with the user stories and flow within the application. 
+The design of the application has a consistent colour scheme to communicate the brand on every page. Pink, black and white are the predominant colours used throughout the application as they reference the Bespoke nails logo, and therefore the majority of the application (images will be refined based on accessibility testing at a later date) will adhere to contrast requirements that ensure accessibility. The colour scheme is designed to appeal to the target audience with the design encompassing a simple and modern aesthetic to appeal to a younger demographic and to further aid with the navigation between pages of the application. As the images used to act as a portfolio that is evidence of the highly detailed artwork in each product, it was important that the surrounding content design was clean and simple to invoke the connotation of an art gallery setting and further elevate the product. There is minimal information displayed on each page to ensure the user is drawn to the key purpose and functionality of each page such as completing a form. There are descriptive links with clear navigation to pages with more specific information, for example, the about/prices page which is a key piece of information a consumer may want to know. This aspect of the design is aligned with the user stories and flow within the application. 
 
 ![homepage](/docs/homepage.png) 
 
-The navigation bar is consistently displayed at the top and bottom of every page when it is rendered to ensure the user can navigate quickly throughout the entire application amd familiarity is quickly gained ensuring a smoother user experience. The landing page has a nail polish in the background to visually communicate the purpose and content of the application. There is a prominent order button designed to stand-out and direct the user to the shop, with the ultimate goal of the user ordering nails. This is strategically placed as the key feature on the homepage and clearly labelled so the user is aware of the action that clicking the button will invoke demonstrating content prioritisation. Colour and imagery is used to enhance space distribution to section the page and allow the user to note different features, for example purchase of gift cards compared to the lookbook where the user can see examples of the product. 
+The navigation bar is consistently displayed at the top and bottom of every page when it is rendered to ensure the user can navigate quickly throughout the entire application and familiarity is quickly gained ensuring a smoother user experience. The landing page has a nail polish in the background to visually communicate the purpose and content of the application. There is a prominent order button designed to stand-out and direct the user to the shop, with the ultimate goal of the user ordering nails. This is strategically placed as the key feature on the homepage and clearly labelled so the user is aware of the action that clicking the button will invoke demonstrating content prioritisation. Colour and imagery are used to enhance space distribution to section the page and allow the user to note different features, for example, purchase of gift cards compared to the lookbook where the user can see examples of the product. 
 
 The secondary purpose of the site is for the administrator to track the products, orders and queries. This is accessed via the admin login at the bottom of the homepage, this link is displayed in the footer as it is not accessible to Bespoke Nail clients but is easily found for admin users that will be aware of where it is located. 
 
@@ -143,7 +146,7 @@ The prototype was designed using Figma demonstrating how the user can navigate t
 Data Flow Diagram for MVP
 ![Data Flow diagram](/docs/Data-Flow-Diagram.png)
 Diagram Key (Yourdon & Coad conventions)
-![Data Flow Diagram Key following Yourdon and Coad comventions](/docs/dataflow-key.png)
+![Data Flow Diagram Key following Yourdon and Coad conventions](/docs/dataflow-key.png)
 
 2nd Release would include Calendar and Appointment features with CRUD operations.
 
@@ -155,7 +158,7 @@ https://www.figma.com/file/ry0gd3MjyaOz7ZGgK0p8iz/Data-Flow---Bespoke-Nails-J%26
 
 The team will be following an agile approach to the project including using a Trello board to show task progress and completion as well as assigning tasks. 
 
-This will follow a 'Kanban' approach of continuous integration over the 4 week timeline with daily stand-ups to reflect on progress and workthrough problems. Following the Kanban approach there will be no required roles but rather shared responsibility and transparency where change can occur at any time rather than waiting for the end of a sprint (as in Scrum approaches). A Kanban board (Trello) was set up with the cards being moved between the 'To-do', 'In Progress' and 'Done' with user stories labelled by priority from 'MVP' and 'Beyond MVP', as well as 'Admin' and 'Customer' stories. Stories are also labelled to show complexity such as 'Authentication Not Required' to aid with time estimation. Prioritization of tasks will be determined in morning stand-up, loosely following building a feature with it's actions - such as customer order including viewing products in the shop, creating an order with the order form and receiving a confirmation message. Each card should take approximately 3 hours to implement but cards may be broken down further once the project starts after a few days if the expected timeframe is found to be inaccurate. Each card will be broken down into fitting out the backend logic, writing and running tests, integration and then front end in React.    
+This will follow a 'Kanban' approach of continuous integration over the 4-week timeline with daily stand-ups to reflect on progress and work through problems. Following the Kanban approach, there will be no required roles but rather shared responsibility and transparency where change can occur at any time rather than waiting for the end of a sprint (as in Scrum approaches). A Kanban board (Trello) was set up with the cards being moved between the 'To-do', 'In Progress' and 'Done' with user stories labelled by priority from 'MVP' and 'Beyond MVP', as well as 'Admin' and 'Customer' stories. Stories are also labelled to show complexity such as 'Authentication Not Required' to aid with time estimation. Prioritization of tasks will be determined in morning stand-up, loosely following building a feature with its actions - such as customer order including viewing products in the shop, creating an order with the order form and receiving a confirmation message. Each card should take approximately 3 hours to implement but cards may be broken down further once the project starts after a few days if the expected time frame is found to be inaccurate. Each card will be broken down into fitting out the backend logic, writing and running tests, integration and then front end in React.    
 
 **Git**
 A GitHub organization 'Zara-Tyrer' was created for the members of the team to support a shared workspace and repositories. 
@@ -170,13 +173,14 @@ Individuals then:
 - Cloned to local repository 
 - Feature Branch is created
 - Regular commits pushed to feature branch in forked repository
-- Pull request is made to merge feature branch into central (original) respository
+- Pull request is made to merge feature branch into central (original) repository
 
 ## Project Management - Trello Screenshots
 
-Trello was used to map out Part A. Requirements were added as well as important links and ideas. Requirements were allocated and tracked via coloured tag. 
-
+Trello was used to map out Part A. Requirements were added as well as important links and ideas. Requirements were allocated and tracked via a coloured tag. 
 ![Trello Screenshot 1](/docs/Trello1.png)
 ![Trello Screenshot 2](/docs/Trello2.png)
 ![Trello Screenshot 3](/docs/Trello3.png)
 ![Trello Screenshot 4](/docs/Trello4.png)
+![Trello Screenshot 5](/docs/Trello5.png)
+
