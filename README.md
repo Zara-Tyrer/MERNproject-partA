@@ -1,8 +1,15 @@
-# Bespoke Nails (MERN application): Part A
+# Bespoke Nails
 
 Developers: **Jade Tyrer & Cassandra Zara**
 
-Part A of Term 3 Coder Academy project - documentation for MERN application
+### Contents
+- [Part A](#part-a)
+- [Part B](#part-b)
+
+
+## Part A
+
+Part A of Term 3 Coder Academy MERN application: Outline of purpose, planning and tech stack
 
 ## Outline 
 
@@ -61,6 +68,7 @@ Deployment
 - Axios as an HTTP client to manage request and response between the server and client
 
 Project Management Tools
+- Git and GitHub for source control
 - Figma for diagrams and wireframe prototype
 - Trello for Kanban board
 - Cardboard for User Stories
@@ -184,3 +192,159 @@ Trello was used to map out Part A. Requirements were added as well as important 
 ![Trello Screenshot 4](/docs/Trello4.png)
 ![Trello Screenshot 5](/docs/Trello5.png)
 
+
+______________________________________________________________________________________________________
+
+## Part B
+
+### Client
+
+The Bespoke Nails client was built with React, utilizing the built-in React-Dom, React-Router-Dom and React Scripts. It was developed to fulfil project criteria for a MERN stack application for Coder Academy, 2020. 
+
+Deployed on Netlify:
+https://bespoke-nails.netlify.app/
+
+### Server
+
+The Bespoke Nails server has 3 main resources with CRUD functionality: Products, Orders and Queries. The server uses Passport Authentication for an Admin user, with no authentication required to access the public routes (see Routes below for specific routes). It has been built with Express using a Node environment and connects to a Mongo Database located on Atlas (Cloud MongoDB). An AWS S3 Bucket has been integrated for image upload for product and order, with the file URL stored as part of the product and order objects (see Schema design).
+
+Using Deployed Server:
+https://bespoke-nails.herokuapp.com/
+
+For further information about using the API including routes and format of resource objects, please see: https://github.com/Zara-Tyrer/bespoke-Server
+
+
+## Part B: Planning and Purpose Update
+
+Current Iteration, as of July 2020:
+
+The purpose of the application is to extend the online platform and functionality for "Bespoke Nails" to digitally manage orders and queries more easily during the work from home era. The application allows orders to be made online for press-on nails either for a pre-made design or by creating a custom order. The application allows the admin user to view and manage all orders and all queries in their dashboard, and manage the products in the shop. The customer is able to see examples of work in the 'Lookbook', view information in the 'About' page, order products from the shop or create a custom order and contact the admin via a query form. The customer receives an order or query confirmation for future reference. The data is persisted in a cloud Mongo database (Atlas), and AWS S3 storage bucket for image upload (see Bespoke-Server in Zara-Tyrer GitHub organization https://github.com/Zara-Tyrer) 
+
+## Client Libraries (Dependencies)
+
+**React Testing Library**
+@testing-library/jest-dom
+@testing-library/react
+@testing-library/user-event
+
+**Axios**
+HTTP client to manage request and response between the server API and client application. The two endpoints communicate through requests and responses with data in JSON format. 
+
+**React-instagram-embed**
+Structure to embed instagram posts from the product owner page into the 'Lookbook' in the application. 
+
+**Styled-components**
+Used for consistent styling and theme across the application and to separate code for clarity in components. 
+
+## Server Middleware
+
+### Middleware
+
+- AWS SDK
+The AWS SDK for JavaScript enables you to directly access AWS services from JavaScript code running in the browser. In the Bespoke Nails server it saves user files to Amazon S3. 
+
+- Body-parser
+Acts as a JSON parser. It parses incoming request bodies before using, available in req.body
+https://www.npmjs.com/package/body-parser
+
+- Connect Mongo
+MongoDB session store for Connect and Express 
+https://www.npmjs.com/package/connect-mongo
+
+- Cors
+"The Cross-Origin Resource Sharing standard works by adding new HTTP headers that let servers describe which origins are permitted to read that information from a web browser."
+In the BN server, cors middleware is used to enable CORS with an access list that allows requests from particular domains, and credentials. 
+Quote from https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+https://www.npmjs.com/package/cors
+
+- Dotenv
+"Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env." In the BN server it is used to load the deployed MongoDB URI and AWS credentials in the development environment. 
+https://www.npmjs.com/package/dotenv
+
+- Express Session
+"Creates a session where the session data is not saved in the cookie itself, just the session ID." Session data is stored server-side, with the maxAge set as 180000000ms in the server. In BN server it is used with Connect-mongo as a store solution. 
+https://www.npmjs.com/package/express-session
+
+- Mongoose (Schema)
+Provides a framework for object modelling (Schema) for Node.js. Mongoose in-built validation has been used in the BN server. 
+https://mongoosejs.com/
+
+- Multer (S3)
+"Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files." In the BN server it has been used to add a file to the request (req.file) object which can then be used in the process of saving the file to the AWS S3 bucket. 
+https://www.npmjs.com/package/multer
+
+
+The following 3 pieces of middleware are installed together to effectively use the Passport-Local-Mongoose strategy for authentication. 
+
+- Passport 
+"Passport is authentication middleware for Node.js. Extremely flexible and modular, Passport can be unobtrusively dropped in to any Express-based web application."
+http://www.passportjs.org/
+
+- Passport-local
+"Passport strategy for authenticating with a username and password. This module lets you authenticate using a username and password in your Node.js applications. By plugging into Passport, local authentication can be easily and unobtrusively integrated into any application or framework that supports Connect-style middleware, including Express."
+http://www.passportjs.org/packages/passport-local/
+
+- Passport-local-mongoose
+Passport-Local Mongoose is a Mongoose plugin that simplifies building username and password login with Passport. Passport-Local Mongoose does not require passport, passport-local or mongoose dependencies directly but expects you to have these dependencies installed. Passport-Local Mongoose will add a username, hash and salt field to store the username, the hashed password and the salt value. Once passport/passport-local are configured, passport-local mongoose will implement a local strategy and serializeUser/deserializeUser functions. See config/passport.js in the BN Server and User.js model. 
+https://www.npmjs.com/package/passport-local-mongoose
+
+### Dev dependencies
+
+- Nodemon
+Nodemon is used in the development environment instead of node to run code so the server will automatically restart when code changes.
+https://nodemon.io/
+
+- Mocha
+A JavaScript test framework running on Node.js for asynchronous testing. See test folder in BN Server for examples for Mocha tests for the resource utilities functions. 
+https://mochajs.org/
+
+- Expect
+Package exports the expect function used in Jest
+https://www.npmjs.com/package/expect
+
+
+## Testing (DevDependencies)
+
+**Resource Utilities**
+
+Mocha testing was used in the server repository with automated recording of tests using a shell script file called 'runtests.sh' in the root directory. See folder 'test' for test code and 'testResults' for the records located in the root directory of Bespoke-Server.
+
+![Example of test record](docs/MochaTestExample.png)
+
+**Manual testing of deployed/local database**
+
+Using VS Code HTTP Client to manually test CRUD functionality in local development environment/local DB and deployed server using deployed database
+
+![Spreadsheet of Products/user testing](docs/productUserTest.png)
+![Spreadsheet of Order testing](docs/orderTest.png)
+![Spreadsheet of Query testing](docs/queryTest.png)
+
+https://docs.google.com/spreadsheets/d/1CYuuwmxb0De-9jqrh4eeWE0-kRsUC8HWzqFssV0k5sE/edit?usp=sharing
+
+**Integration**
+
+Cypress was utilized for end-to-end integration testing. Tests were written and run for the main resources: Product*, Order*, Query and Admin User authentication. Please see the Cypress folder/videos in BN Client to examine the tests. 
+
+![Summary of Cypress tests](docs/CypressTest.png)
+
+*It should be noted that there were difficulties in fully assessing the file upload functionality in the Cypress tests due to integration with AWS S3 storage. The test result demonstrates that a fileLink is created and saved into the resource but there were difficulties rendering the image from the test. This functionality was assessed manually and functions effectively both in the development and production environments. 
+
+## WorkFlow
+
+A forking feature branch workflow was utilized by the developers throughout the project with daily communication to discuss allocation of tasks. As there was a very high level of verbal communication over video conference about which features were being worked on, consultation and demonstration of new code before merging into the central repository and substantial pair programming, tasks have not always been tagged by developer name. The developers consider the consistent and daily communication in allocating and collaborating on features to have been an effective process throughout the project. 
+
+The user stories were transferred to a Trello Kanban board, and their progress was tracked by tags that further broke down the task by time and difficulty. In general, tasks were first built into the server to develop CRUD functionality, Mocha tests written, Manual testing using VS Code client (client.http) and recorded in a spreadsheet (see docs). The task was then tagged with 'Done in Server'. The task was then moved into from Current Sprint (initial listing of tasks, tagged with Admin or Customer and whether authentication was required to use the route) to the 'To do' column. Once in the To-do column, a developer would then build the functionality into the client and once this was completed and tested manually by completing the action and checking the result in the deployed cloud Mongo database, the task was tagged 'Done in Client'. The task would then be moved into the 'In progress - needs styling' column. The developer would then apply styling and once satisfied, the task would be moved into the 'Done & Styled' Column. Cypress testing was used to assess the effectiveness of integration between the client, server, cloud database and the S3 bucket that was incorporated for file upload (see tasks tagged 'Beyond MVP'). The developers would regularly undertake review to consult and collaborate on choices about further functionality and styling on tasks in the 'Done & Styled' column. 
+
+Trello board: https://trello.com/b/iQyZYJnh/mern-project-part-a
+
+<!-- ![Screenshot of Trello board progress 1](docs/Trello-Part-B/B1Trello.png) -->
+![Screenshot of Trello board progress 2](docs/Trello-Part-B/B2Trello.png)
+<!-- ![Screenshot of Trello board progress 3](docs/Trello-Part-B/B3Trello.png) -->
+![Screenshot of Trello board progress 4](docs/Trello-Part-B/B4Trello.png)
+![Screenshot of Trello board progress 5](docs/Trello-Part-B/B5Trello.png)
+![Screenshot of Trello board progress 6](docs/Trello-Part-B/B6Trello.png)
+![Screenshot of Trello board progress 7](docs/Trello-Part-B/B7Trello.png)
+![Screenshot of Trello board progress 8](docs/Trello-Part-B/B8Trello.png)
+![Screenshot of Trello board progress 9](docs/Trello-Part-B/B9Trello.png)
+![Screenshot of Trello board progress 10](docs/Trello-Part-B/B10Trello.png)
+![Screenshot of Trello board progress 11](docs/Trello-Part-B/B11Trello.png)
