@@ -245,8 +245,8 @@ Used for consistent styling and theme across the application and to separate cod
 The AWS SDK for JavaScript enables you to directly access AWS services from JavaScript code running in the browser. In the Bespoke Nails server it saves user files to Amazon S3. 
 
 ##### Body-parser
-"Acts as a JSON parser."([^1]) It parses incoming request bodies before using, available in req.body.
-([^1]: https://www.npmjs.com/package/body-parser)
+"Acts as a JSON parser."[^1] It parses incoming request bodies before using, available in req.body.
+[^1]: https://www.npmjs.com/package/body-parser
 
 ##### Connect Mongo
 MongoDB session store for Connect and Express.([^2]) Session is important for cookies and sessionID which stores loggedInUser (user persistence). 
