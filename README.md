@@ -1,6 +1,8 @@
 # Bespoke Nails
 
 Developers: **Jade Tyrer & Cassandra Zara**
+GitHub: https://github.com/Zara-Tyrer
+Website: https://bespoke-nails.netlify.app/ 
 July, 2020
 
 ### Contents
