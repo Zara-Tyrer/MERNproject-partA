@@ -1,6 +1,7 @@
 # Bespoke Nails
 
 Developers: **Jade Tyrer & Cassandra Zara**
+July, 2020
 
 ### Contents
 - [Part A](#part-a)
@@ -9,7 +10,7 @@ Developers: **Jade Tyrer & Cassandra Zara**
 
 ## Part A
 
-Part A of Term 3 Coder Academy MERN application: Outline of purpose, planning and tech stack
+Part A of Term 3 Coder Academy MERN application project: _Outline of purpose, planning and tech stack_
 
 ## Outline 
 
@@ -160,7 +161,7 @@ Diagram Key (Yourdon & Coad conventions)
 
 https://www.figma.com/file/ry0gd3MjyaOz7ZGgK0p8iz/Data-Flow---Bespoke-Nails-J%26C?node-id=0%3A1
 
-## Workflow
+## Workflow Outline
 
 ##### Methodology
 
@@ -222,92 +223,93 @@ The purpose of the application is to extend the online platform and functionalit
 
 ## Client Libraries (Dependencies)
 
-**React Testing Library**
+##### React Testing Library
 @testing-library/jest-dom
 @testing-library/react
 @testing-library/user-event
 
-**Axios**
+##### Axios
 HTTP client to manage request and response between the server API and client application. The two endpoints communicate through requests and responses with data in JSON format. 
 
-**React-instagram-embed**
+##### React-instagram-embed
 Structure to embed instagram posts from the product owner page into the 'Lookbook' in the application. 
 
-**Styled-components**
+##### Styled-components
 Used for consistent styling and theme across the application and to separate code for clarity in components. 
 
 ## Server Middleware
 
 ### Middleware
 
-- AWS SDK
+##### AWS SDK
 The AWS SDK for JavaScript enables you to directly access AWS services from JavaScript code running in the browser. In the Bespoke Nails server it saves user files to Amazon S3. 
 
-- Body-parser
-Acts as a JSON parser. It parses incoming request bodies before using, available in req.body
-https://www.npmjs.com/package/body-parser
+##### Body-parser
+"Acts as a JSON parser."[^1] It parses incoming request bodies before using, available in req.body.
+[^1]: https://www.npmjs.com/package/body-parser
 
-- Connect Mongo
-MongoDB session store for Connect and Express 
-https://www.npmjs.com/package/connect-mongo
+##### Connect Mongo
+MongoDB session store for Connect and Express.[^2] Session is important for cookies and sessionID which stores loggedInUser (user persistence). 
+[^2]: https://www.npmjs.com/package/connect-mongo
 
-- Cors
-"The Cross-Origin Resource Sharing standard works by adding new HTTP headers that let servers describe which origins are permitted to read that information from a web browser."
-In the BN server, cors middleware is used to enable CORS with an access list that allows requests from particular domains, and credentials. 
-Quote from https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
-https://www.npmjs.com/package/cors
+##### Cors
+"The Cross-Origin Resource Sharing standard works by adding new HTTP headers that let servers describe which origins are permitted to read that information from a web browser."[^3]
+In the BN server, cors middleware is used to enable CORS with an access list that allows requests from particular domains, and credentials.[^4]
+[^3]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+[^4]: https://www.npmjs.com/package/cors
 
-- Dotenv
-"Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env." In the BN server it is used to load the deployed MongoDB URI and AWS credentials in the development environment. 
-https://www.npmjs.com/package/dotenv
+##### Dotenv
+"Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env."[^5] In the BN server it is used to load the deployed MongoDB URI and AWS credentials in the development environment. 
+[^5]: https://www.npmjs.com/package/dotenv
 
-- Express Session
-"Creates a session where the session data is not saved in the cookie itself, just the session ID." Session data is stored server-side, with the maxAge set as 180000000ms in the server. In BN server it is used with Connect-mongo as a store solution. 
-https://www.npmjs.com/package/express-session
+##### Express Session
+"Creates a session where the session data is not saved in the cookie itself, just the session ID."[^6] Session data is stored server-side, with the maxAge set as 180000000ms in the server. In BN server it is used with Connect-mongo as a store solution. 
+[^6]: https://www.npmjs.com/package/express-session
 
-- Mongoose (Schema)
-Provides a framework for object modelling (Schema) for Node.js. Mongoose in-built validation has been used in the BN server. 
-https://mongoosejs.com/
+##### Mongoose (Schema)
+Provides a framework for object modelling (Schema) for Node.js.[^7] Mongoose in-built validation has been used in the BN server. 
+[^7]: https://mongoosejs.com/
 
-- Multer (S3)
-"Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files." In the BN server it has been used to add a file to the request (req.file) object which can then be used in the process of saving the file to the AWS S3 bucket. 
-https://www.npmjs.com/package/multer
+##### Multer (S3)
+"Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files."[^8] In the BN server it has been used to add a file to the request (req.file) object which can then be used in the process of saving the file to the AWS S3 bucket. 
+[^8]: https://www.npmjs.com/package/multer
 
 
 The following 3 pieces of middleware are installed together to effectively use the Passport-Local-Mongoose strategy for authentication. 
 
-- Passport 
-"Passport is authentication middleware for Node.js. Extremely flexible and modular, Passport can be unobtrusively dropped in to any Express-based web application."
-http://www.passportjs.org/
+##### Passport 
+"Passport is authentication middleware for Node.js. Extremely flexible and modular, Passport can be unobtrusively dropped in to any Express-based web application."[^9] In Bespoke Nails, the Passport-local Mongoose strategy is used to provide secure authentication for the Admin user. 
+[^9]: http://www.passportjs.org/
 
-- Passport-local
-"Passport strategy for authenticating with a username and password. This module lets you authenticate using a username and password in your Node.js applications. By plugging into Passport, local authentication can be easily and unobtrusively integrated into any application or framework that supports Connect-style middleware, including Express."
-http://www.passportjs.org/packages/passport-local/
+##### Passport-local
+"Passport strategy for authenticating with a username and password. This module lets you authenticate using a username and password in your Node.js applications. By plugging into Passport, local authentication can be easily and unobtrusively integrated into any application or framework that supports Connect-style middleware, including Express."[^10]
+[^10]: http://www.passportjs.org/packages/passport-local/
 
-- Passport-local-mongoose
-Passport-Local Mongoose is a Mongoose plugin that simplifies building username and password login with Passport. Passport-Local Mongoose does not require passport, passport-local or mongoose dependencies directly but expects you to have these dependencies installed. Passport-Local Mongoose will add a username, hash and salt field to store the username, the hashed password and the salt value. Once passport/passport-local are configured, passport-local mongoose will implement a local strategy and serializeUser/deserializeUser functions. See config/passport.js in the BN Server and User.js model. 
-https://www.npmjs.com/package/passport-local-mongoose
+##### Passport-local-mongoose
+"Passport-Local Mongoose is a Mongoose plugin that simplifies building username and password login with Passport. Passport-Local Mongoose does not require passport, passport-local or mongoose dependencies directly but expects you to have these dependencies installed. Passport-Local Mongoose will add a username, hash and salt field to store the username, the hashed password and the salt value."[^11] Once passport/passport-local are configured, passport-local mongoose will implement a local strategy and serializeUser/deserializeUser functions. See config/passport.js in the BN Server and User.js model. 
+[^11]: https://www.npmjs.com/package/passport-local-mongoose
 
 ### Dev dependencies
 
-- Nodemon
+##### Nodemon
 Nodemon is used in the development environment instead of node to run code so the server will automatically restart when code changes.
 https://nodemon.io/
 
-- Mocha
-A JavaScript test framework running on Node.js for asynchronous testing. See test folder in BN Server for examples for Mocha tests for the resource utilities functions. 
-https://mochajs.org/
+##### Mocha
+"A JavaScript test framework running on Node.js for asynchronous testing."[^12] See test folder in BN Server for examples for Mocha tests for the resource utilities functions. 
+[^12]: https://mochajs.org/
 
-- Expect
-Package exports the expect function used in Jest
-https://www.npmjs.com/package/expect
+##### Expect
+Package exports the expect function used in Jest[^13]
+[^13]: https://www.npmjs.com/package/expect
 
 
 ## Testing (DevDependencies)
 
 **Resource Utilities**
 
-Mocha testing was used in the server repository with automated recording of tests using a shell script file called 'runtests.sh' in the root directory. See folder 'test' for test code and 'testResults' for the records located in the root directory of Bespoke-Server.
+Mocha testing was used in the server with automated recording of tests using a shell script file called 'runtests.sh' in the root directory. **See folder 'test' for test code and 'testResults'** for the records of tests run on CRUD actions of Order, Product and Query resources, located in the root directory of Bespoke-Server.
+An example of a test record is included below
 
 ![Example of test record](docs/MochaTestExample.png)
 
@@ -331,7 +333,7 @@ Cypress was utilized for end-to-end integration testing. Tests were written and 
 
 ## WorkFlow
 
-A forking feature branch workflow was utilized by the developers throughout the project with daily communication to discuss allocation of tasks. As there was a very high level of verbal communication over video conference about which features were being worked on, consultation and demonstration of new code before merging into the central repository and substantial pair programming, tasks have not always been tagged by developer name. The developers consider the consistent and daily communication in allocating and collaborating on features to have been an effective process throughout the project. 
+A forking feature branch workflow was utilized by the developers throughout the project ([Workflow outline from Part A](#workflow-outline)) with daily communication to discuss allocation of tasks. As there was a very high level of verbal communication over video conference about which features were being worked on, consultation and demonstration of new code before merging into the central repository and substantial pair programming, tasks have not always been tagged by developer name. The developers consider the consistent and daily communication in allocating and collaborating on features to have been an effective process throughout the project. 
 
 The user stories were transferred to a Trello Kanban board, and their progress was tracked by tags that further broke down the task by time and difficulty. In general, tasks were first built into the server to develop CRUD functionality, Mocha tests written, Manual testing using VS Code client (client.http) and recorded in a spreadsheet (see docs). The task was then tagged with 'Done in Server'. The task was then moved into from Current Sprint (initial listing of tasks, tagged with Admin or Customer and whether authentication was required to use the route) to the 'To do' column. Once in the To-do column, a developer would then build the functionality into the client and once this was completed and tested manually by completing the action and checking the result in the deployed cloud Mongo database, the task was tagged 'Done in Client'. The task would then be moved into the 'In progress - needs styling' column. The developer would then apply styling and once satisfied, the task would be moved into the 'Done & Styled' Column. Cypress testing was used to assess the effectiveness of integration between the client, server, cloud database and the S3 bucket that was incorporated for file upload (see tasks tagged 'Beyond MVP'). The developers would regularly undertake review to consult and collaborate on choices about further functionality and styling on tasks in the 'Done & Styled' column. 
 
